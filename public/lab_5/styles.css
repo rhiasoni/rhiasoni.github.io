@@ -1,6 +1,6 @@
 /*CSS*/
 body {
-    background: #3895a8;
+    background: #abe2df;
   }
   
   .wrapper {
@@ -60,7 +60,7 @@ body {
   }
   
   .flex-inner li {
-    width: 80px;
+    width: 95px;
   }
   
   .flex-inner {
@@ -70,7 +70,7 @@ body {
   }
   
   .flex-outer {
-    margin-right: 10px;
+    margin: 0 auto;
     max-width:800px;
     padding: 0 16px;
   }
