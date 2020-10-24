@@ -8,14 +8,21 @@ function range(int) {
   return arr;
 }
 
-function sortFunction(a, b, key) {
+function sortByKey(a, b, key) {
   if (a[key] < b[key]) {
-    return -1;
-  } if (a[key] > b[key]) {
     return 1;
+  } if (a[key] > b[key]) {
+    return -1;
   }
   return 0;
 }
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
@@ -29,8 +36,29 @@ document.body.addEventListener('submit', async (e) => {
   })
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
+    
       // You're going to do your lab work in here. Replace this comment.
-      console.log('fromServer', fromServer);
+      if (document.querySelector('.flex-inner')){
+        document.querySelector('.flex-inner').remove();
+      }
+
+      const newArr = range(10);
+      const newArr2 = newArr.map(() => {
+        const number = getRandomIntInclusive(0, 243);
+        return fromServer[num];
+      });
+
+      const reverseList = newArr2.sort((org,compare) => sortByKey(org, compare, 'name'));
+      const ol = document.createElement('ol');
+      ol.className = 'flex-inner';
+      $('form').prepend(ol);
+
+      reverseList.forEach((el, i) => {
+        const li = document.createElement('li');
+        $(li).append(`<input type = "checkbox" value=${el.code} id=$(el.code) />`);
+        $(li).append(`<label for=${el.code}>${el.name}</label>`);
+        $(ul).append(li);
+      });
     })
     .catch((err) => console.log(err));
 });
