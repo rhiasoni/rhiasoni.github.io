@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Rhia Soni's Lab 5</title>
+    <title>Rhia Soni's Lab 4</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
     <div class="wrapper">
         <div class="container">
             <div class="header">
-                <h1>Lab 5 for Rhia Soni</h1>
+                <h1>Rhia Soni's Lab 4</h1>
             </div>
             <form action="/api" method="post">
                 <ul class="flex-outer">
@@ -24,7 +24,7 @@
                         <textarea name="message" id="message" cols="33" rows="10">This is some default message text.</textarea></li>
                     <li>
                         <p>
-                            Age
+                            <div class = "checkbox-list-label">Age</div>              
                         </p>
                         <ul class='flex-inner'>
                             <li><input type="checkbox" id="eighteen-thirtyfive" name="age">
@@ -53,6 +53,17 @@
              console.log(response);
         })
         document.body.style.background = "cyan";
+        document.querySelector('h1').textContent = "Lab 5 for Rhia Soni";
+        document.querySelector('title').textContent = "Rhia Soni's Lab 5";
+        document.querySelector('.checkbox-list-label').textContent = "Fruits";
+        document.querySelector('.flex-outer').style.margin = "0 auto";
+        document.querySelectorAll("input[type='checkbox']").forEach(replaceAge);
+        
+    }
+    var fruits = ['lemon', 'blackcherry', 'mango'];
+    function replaceAge(item, index, arr){
+        alert(arr[index].text);
+        arr[index].labels[0].innerText = fruits[index];
     }
     </script>
 </body>
