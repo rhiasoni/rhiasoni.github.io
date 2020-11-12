@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
   <head>
-    <meta charset="utf-8">
     <title>Assignment 1</title>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -11,54 +12,59 @@
     <![endif]-->
   </head>
   <body>
+    <div class="header" >
+      <h1>Rhia Soni and Andrew Day's A1</h1>
+      <img src="umd-logo.jpg" alt="umd logo" width ="100" height="100" class="img1">
+    </div>
+
+
     <div class="wrapper">
       <div class="container">
-        <div class="header" >
-          <h1>Rhia Soni and Andrew Day's A1</h1>
-          <img src="umd-logo.jpg" alt="umd logo" width ="100" height="100" class="img1">
-        </div>
-       
        <div class = "content">
-        <div class=".block1" style="float: left">
-          <img src="Terrapin.jpg" alt="Terrapin" width ="199" height="199" class="img2">
+        <div class="block1">
+          <img class="img2" src="Terrapin.jpg" alt="Terrapin" width ="199" height="199">
           <p> This is a picture of a Turtle.</p>
         </div>
-        <div class=".block2" style="float: right">
-          <div>
-          <h2>Assignment 1 List</h2>
+
+
+        <div class="block2" style="float: right">
+          <h2 class="mainList">Assignment 1 List</h2>
           <p>Here is some gibberish</p>
-            <ol class="parent">
-              <li><h2>Number 1</h2>
-                Things about UMD
-                  <ul class="child1">
-                    <li>Testudo is cool</li>
-                    <li>UMD is located in College Park</li>
-                    <li>We like Terrapins</li>
+            <ol>
+              <li>
+                <h2 class="list">List 1</h2>
+                  <div class="child">Things about UMD</div>
+                    <ul class="bullets">
+                      <li>Testudo is cool</li>
+                      <li>UMD is located in College Park</li>
+                      <li>We like Terrapins</li>
                   </ul>
               </li>
-              <li><h2>Number 2</h2>
-                Places to study on campus
-                  <ul class="child2">
-                    <li>Mckeldin Library is the biggest library on campus</li>
-                    <li>Hornbake Library is where the iSchool office is located</li>
-                    <li>ESJ is also a cool building where people study</li>
+              <li>
+                <h2 class="list">List 2</h2>
+                  <div class="child">Places to study on campus</div>
+                    <ul class="bullets">
+                      <li>Mckeldin Library is the biggest library on campus</li>
+                      <li>Hornbake Library is where the iSchool office is located</li>
+                      <li>ESJ is also a cool building where people study</li>
                   </ul>
               </li>
-              <li><h2>Number 3</h2>
-                Places to eat on campus
-                  <ul class="child3">
-                    <li>The North Diner is on North Campus</li>
-                    <li>The South Diner is on South Campus</li>
-                    <li>251 North is located in the Denton Community</li>
+              <li>
+                <h2 class="list">List 3</h2>
+                  <div class="child">Things about UMD</div>
+                    <ul class="bullets3">
+                      <li>The North Diner is on North Campus</li>
+                      <li>The South Diner is on South Campus</li>
+                      <li>251 North is located in the Denton Community</li>
                   </ul>
               </li>
             </ol>
           </div>
 
-          </div>
-        </div>
+       </div>
       </div>
     </div>
+
     <script>
         function clickMe() {
             const RolesHeader = document.querySelector('.rolesTitle');
@@ -66,5 +72,6 @@
             RolesHeader.innerHTML ="<h3>Hello World </h3>";
         }
     </script>
+
   </body>
-</html>
+</html>        
